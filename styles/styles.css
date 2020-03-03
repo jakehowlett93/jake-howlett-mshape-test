@@ -1,0 +1,68 @@
+.side-panel-wrapper {
+    display: flex;
+    float: left;
+    width: 25%;
+}
+
+.container {
+    float: left;
+    width: 75%;
+}
+
+#side-panel {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(221, 220, 220);
+    background-size: 100%;
+}
+
+.calendar-btn {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(150, 223, 215);
+}
+
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    background-color: blue;
+}
+
+.time-slot-info {
+    background-color: blueviolet;
+}
+
+.panel-icon {
+    float: left;
+}
+
+.panel-text {
+    float: left;
+    padding-top: 20px;
+}
+
+button {
+    background-color: Transparent;
+    outline: none;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#event-display {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .panel-text {
+        display: none;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico'> CHANGE THE FAVICON OR REMOVE-->
+  </head>
+
+  <body>
+    <main>
+        <div>
+            <div class="side-panel-wrapper">
+                <div id="side-panel">
+                    <div>
+                        <img class="panel-icon img-responsive" src="https://img.icons8.com/cotton/64/000000/calendar.png" alt="a calendar icon">
+                        <p class="panel-text">side-panel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-sm-4 col-md-7 col-lg-4" id="calendar-container">
+                <div class="card center-text center-block">
+                    <div class="calendar-header">
+                        <button class="btn center-txt calendar-btn glyphicon glyphicon-chevron-left" onclick=previous()></button></button>
+                        <h3 class="card-header center-text" id="month-year">Month and Year</h3>
+                        <button class="btn calendar-btn center-text glyphicon glyphicon-chevron-right" onclick=next()></button>
+                    </div>
+                    <table class="table table-bordered table-responsive-sm" id="calendar-table">
+                        <thead>
+                            <tr>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="event-display">
+                <h1>hello</h1>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>
