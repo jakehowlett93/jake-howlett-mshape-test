@@ -10,7 +10,7 @@
     height: 60%
 }
 
-.center-align {
+.cell-text-align {
     text-align: center;
 }
 
@@ -52,6 +52,7 @@ table {
     width: 60%;
     border-collapse: collapse;
 }
+
 #event-display {
     display: none;
     width: 100%;
@@ -68,14 +69,42 @@ table {
 }
 
 .has-event {
-    border-style: solid;
-    border-color: rgb(165, 221, 206);
+    outline:2px solid rgb(165, 221, 206);
+}
+
+.today {
+    outline:2px solid rgb(37, 64, 81);
 }
 
 
 @media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .side-panel-wrapper {
+        width: 10%;
+    }
 
     .panel-text {
         display: none;
+    }
+
+    td {
+        font-size: 10px;
+        padding: 0;
+    }
+
+    tr {
+        font-size: 12px;
+        padding: 0;
+    }
+
+    #calendar-container {
+        padding: 0;
+    }
+
+    #month-year {
+        font-size: 12px;
     }
 }

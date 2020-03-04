@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico'> CHANGE THE FAVICON OR REMOVE-->
   </head>
 
   <body>
@@ -22,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container col-sm-4 col-md-7 col-lg-4" id="calendar-container">
+            <div class="container" id="calendar-container">
                 <div class="card center-text center-block">
                     <div class="calendar-header">
                         <button class="btn center-txt calendar-btn glyphicon glyphicon-chevron-left" onclick=previous()></button></button>
@@ -32,24 +31,23 @@
                     <table class="table table-bordered table-responsive-sm" id="calendar-table">
                         <thead>
                             <tr>
-                                <th>Mon</th>
-                                <th>Tue</th>
-                                <th>Wed</th>
-                                <th>Thu</th>
-                                <th>Fri</th>
-                                <th>Sat</th>
-                                <th>Sun</th>
+                                <th>M</th>
+                                <th>T</th>
+                                <th>W</th>
+                                <th>T</th>
+                                <th>F</th>
+                                <th>S</th>
+                                <th>S</th>
                             </tr>
                         </thead>
                         <tbody id="calendar-body"></tbody>
                     </table>
                 </div>
                 <div id="event-display"> 
-                    <h1>Event: <input type="text" id="event-input" name="update-event"></h1>
+                    <p>Event: <input type="text" id="event-input" name="update-event"></p>
                     <input type="submit" value="save" id="event-submit" onclick="saveEvent()">
                 </div>
             </div>
-
         </div>
     </main>
     <script type="text/javascript" src="js/scripts.js"></script>
