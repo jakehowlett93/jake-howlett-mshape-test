@@ -1,5 +1,6 @@
 let today = new Date();
 let currentMonth = today.getMonth();
+
 let currentYear = today.getFullYear();
 let currentDay = today.getDate();
 let monthYear = document.getElementById("month-year");
@@ -104,7 +105,7 @@ function showCalendar(month, year) {
         }
 
         cell.id = month + "day" + dateCounter;
-        if (cell.id === month + "day" + currentDay) {
+        if (cell.id === today.getMonth() + "day" + currentDay) {
           cell.classList.add("today");
         }
         row.appendChild(cell);
