@@ -58,22 +58,18 @@ function showCalendar(month, year) {
   calendarBody.innerHTML = "";
   let dateCounter = 1;
 
-  for (let i = 0; i < 6; i++) {
+  for (let row = 0; row < 6; row++) {
     //loops round rows of the calendar
     let row = document.createElement("tr");
-    for (let j = 0; j < 7; j++) {
+    row.classList.add("calendar-row")
+    for (let col = 0; col < 7; col++) {
       //loops round the columns of the calendar
       if (dateCounter > 42) {
         break;
-      } else if (i === 0 && j < firstDay) {
-        //create empty cells until it reaches first day of the month
+      } else if (row === 0 && col < firstDay || row === 6 && dateCounter > daysInMonth) {
+        //create empty cells until the first day of the month or after the last day
         let cell = document.createElement("td");
-        let cellText = document.createTextNode("");
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      } else if (dateCounter > daysInMonth) {
-        //create empty cells after the last day of the month
-        let cell = document.createElement("td");
+        cell.classList.add("cell")
         let cellText = document.createTextNode("");
         cell.appendChild(cellText);
         row.appendChild(cell);
@@ -85,11 +81,10 @@ function showCalendar(month, year) {
         //TODO move this to CSS, currently i cant get the style to apply in CSS, i think its a
         //specificity issue with bootstrap but i cant work out how to fix it
         let cellText = document.createTextNode(dateCounter);
-
         cell.appendChild(cellText);
 
-        for (let k = 0; k < 2; k++) {
-          if (k % 2 === 0) {
+        for (let time = 0; time < 2; time++) {
+          if (time % 2 === 0) {
             timeSlot = "am";
           } else {
             timeSlot = "pm";
@@ -114,8 +109,6 @@ function showCalendar(month, year) {
     }
     calendarBody.appendChild(row);
   }
-
-  //
 
   document
     .getElementById("calendar-body")

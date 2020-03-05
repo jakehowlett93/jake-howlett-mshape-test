@@ -24,14 +24,14 @@
             <div class="container" id="calendar-container">
                 <div class="card center-text center-block">
                     <div class="calendar-header">
-                        <button class="btn center-txt calendar-btn glyphicon glyphicon-chevron-left" onclick=previous()></button>
+                        <button class="btn center-txt calendar-btn glyphicon glyphicon-chevron-left" id="previous-button" onclick=previous()></button>
                         </button>
                         <h3 class="card-header center-text" id="month-year">Month and Year</h3>
-                        <button class="btn calendar-btn center-text glyphicon glyphicon-chevron-right" onclick=next()></button>
+                        <button class="btn calendar-btn center-text glyphicon glyphicon-chevron-right" id="next-button" onclick=next()></button>
                     </div>
                     <table class="table table-bordered table-responsive-sm" id="calendar-table">
                         <thead>
-                            <tr>
+                            <tr class="calendar-row">
                                 <th>M</th>
                                 <th>T</th>
                                 <th>W</th>
@@ -46,7 +46,7 @@
                 </div>
                 <div id="event-display">
                     <p>Event:
-                        <input type="text" id="event-input" name="update-event">
+                        <input type="text" class="form-control" id="event-input" name="update-event">
                     </p>
                     <input type="submit" value="save" id="event-submit" onclick="saveEvent()">
                 </div>
